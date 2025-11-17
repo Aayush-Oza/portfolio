@@ -527,27 +527,14 @@ body {
   color: var(--accent-1) !important;
 }
 
-/* =====================================================
-   MOBILE FIX FOR DESKTOP-SITE MODE
-===================================================== */
-
-/* MOST IMPORTANT FIX */
-@media (max-device-width: 768px) {
-  .hamburger {
-    display: flex !important;
-  }
-
-  .nav {
-    right: 0 !important;
-    transform: translateX(100%) !important;
-  }
-
+/* SAFE MOBILE FIX */
+@media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   #about .container {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }
 
