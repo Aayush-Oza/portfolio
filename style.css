@@ -40,10 +40,11 @@ body {
 }
 
 .container {
-  width: 92%;
-  max-width: 1200px;
-  margin: auto;
+  width: 98%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
+
 
 /* =====================================================
    HEADER + NAVIGATION
