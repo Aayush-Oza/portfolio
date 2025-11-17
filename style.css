@@ -138,20 +138,25 @@ body.nav-open .nav {
 
 /* Desktop Nav */
 @media (min-width: 768px) {
-  .hamburger { display: none; }
+  .hamburger {
+    display: none !important;
+  }
+
   .nav {
+    display: block !important;  /* <-- REQUIRED */
     position: static;
     width: auto;
     height: auto;
     background: none;
-    transform: none !important;
     box-shadow: none;
     padding: 0;
   }
+
   .nav-list {
     flex-direction: row;
     gap: 16px;
   }
+
   .nav-list a {
     padding: 8px 13px;
   }
@@ -516,14 +521,12 @@ body.nav-open .nav {
 ===================================================== */
 @media (max-width: 768px) {
 
+  /* Show hamburger only on mobile */
   .hamburger {
-    display: flex !important;
+    display: flex;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr !important;
-  }
-
+  /* Mobile About section layout — image first, text below */
   #about .container {
     display: flex;
     flex-direction: column-reverse;
@@ -534,7 +537,13 @@ body.nav-open .nav {
   .about-text {
     text-align: left !important;
   }
+
+  /* Projects 1 column on mobile */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
+
 
 /* PREVENT BACKGROUND BLEED */
 .hero,
