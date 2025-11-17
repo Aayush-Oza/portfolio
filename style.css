@@ -39,10 +39,11 @@ body {
   overflow-x: hidden;
 }
 
+/* FIXED CONTAINER FOR ALL DEVICES */
 .container {
   width: 95%;
-  max-width: 1400px;
-  margin: auto;
+  max-width: 1200px;   /* FIXED WIDTH */
+  margin: 0 auto;
 }
 
 /* =====================================================
@@ -58,10 +59,15 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
+/* FIX HEADER ALIGNMENT */
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 14px;
 }
 
 .brand {
@@ -153,8 +159,8 @@ body {
     width: auto;
     height: auto;
     background: none;
-    box-shadow: none;
     transform: none;
+    box-shadow: none;
     padding: 0;
   }
   .nav-list {
@@ -232,46 +238,38 @@ body {
   text-align: center;
   padding-top: 60px;
 }
-/* FIX: ABOUT TEXT LEFT ON MOBILE */
+
 #about .about-text {
   text-align: left;
 }
+
 #about .lead {
-    line-height: 1.5;       /* smooth readable spacing */
-    margin-bottom: 16px;    /* little gap between paragraphs */
+  line-height: 1.5;
+  margin-bottom: 16px;
 }
 
-/* FINAL PERFECT ABOUT IMG (NO CROP + NO BLANK SPACE) */
 .about-photo {
-  width: 180px;           /* square size on mobile */
+  width: 180px;
   height: 180px;
-  object-fit: cover;      /* fill without white space */
-  
+  object-fit: cover;
   border-radius: 18px;
   border: 3px solid rgba(0,0,0,0.08);
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-
   display: block;
-  margin: auto;           /* centered on mobile */
+  margin: auto;
   padding: 0;
-  background: none;
 }
 
-/* DESKTOP FIX — keeps position same, just increases size slightly */
 @media (min-width: 900px) {
   #about .container {
-    grid-template-columns: 1fr 350px;   /* keep exact layout */
-    text-align: left;
+    grid-template-columns: 1fr 350px;
   }
-
   .about-photo {
-    width: 240px;         /* bigger on desktop */
+    width: 240px;
     height: 240px;
-    object-fit: cover;
-    margin: 0;            /* keep image at right properly */
+    margin: 0;
   }
 }
-
 
 /* =====================================================
    SKILLS
@@ -332,7 +330,6 @@ body {
   box-shadow: 0 25px 45px rgba(0,0,0,0.12);
 }
 
-/* Image box */
 .project-media {
   width: 90px;
   height: 90px;
@@ -424,7 +421,7 @@ body {
   margin-right: 12px;
 }
 
-.copyright {
+©opyright {
   text-align: center;
   margin-top: 24px;
   color: var(--muted);
@@ -445,7 +442,6 @@ body {
 
   --gradient: linear-gradient(135deg, #6a5443, #c6a676);
 }
-
 
 .dark-theme .nav-list a,
 .dark-theme .footer-nav a {
@@ -474,28 +470,17 @@ body {
 .dark-theme .nav-list a:hover {
   background: rgba(255,255,255,0.12) !important;
 }
-.dark-theme .nav-list a {
-    color: #4b413a !important;    /* same as View Projects button bg */
-    font-weight: 700;
-}
-/* BRAND FIX FOR DARK THEME */
+
 .dark-theme .brand,
 .dark-theme .brand .dot {
-    color: #4b413a !important;
+  color: #4b413a !important;
 }
 
-
-
-/* DARK THEME — MOBILE NAV (USE WHITE TEXT) */
+/* MOBILE DARK NAV FIX */
 @media (max-width: 767px) {
   .dark-theme .nav-list a {
-      color: #ffffff !important;       /* white for slide panel */
+    color: #ffffff !important;
   }
-}
-
-/* FIX: copyright text should stay same color as light theme */
-.dark-theme .copyright small {
-    color: black !important;    /* same as light theme var(--muted) */
 }
 
 /* =====================================================
@@ -504,7 +489,7 @@ body {
 .theme-btn {
   position: fixed;
   bottom: 22px;
-  right: 22px;
+  right: 16px;
   padding: 12px 20px;
   background: var(--accent-1);
   color: #fff;
@@ -519,42 +504,58 @@ body {
 .theme-btn:hover {
   transform: translateY(-3px);
 }
-/* =====================================================
-   ALWAYS KEEP ORIGINAL BRAND COLORS (Both Themes)
-===================================================== */
 
-/* Prevent dark theme from forcing white */
-.social i {
-    color: inherit !important;
-}
+/* ALWAYS KEEP ICON COLORS */
+.social i { color: inherit !important; }
 
-/* Brand Colors */
-.social.insta i {
-    color: #E4405F !important;   /* Instagram pink */
-}
-.social.linkedin i {
-    color: #0A66C2 !important;   /* LinkedIn blue */
-}
-.social.github i {
-    color: #000000 !important;   /* GitHub black */
-}
+.social.insta i { color: #E4405F !important; }
+.social.linkedin i { color: #0A66C2 !important; }
+.social.github i { color: #000000 !important; }
 
-/* Hover Effect: You can choose (optional) */
 .social:hover i {
-    color: #ffffff !important;  /* turn white on hover */
+  color: #ffffff !important;
 }
+
+/* CONTACT FIX */
+.footer-card a {
+  color: var(--text) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-card a:hover {
+  color: var(--accent-1) !important;
+}
+
 /* =====================================================
-   FIX CONTACT LINK COLORS (PHONE & EMAIL)
+   MOBILE FIX FOR DESKTOP-SITE MODE
 ===================================================== */
 
-/* Normal state */
-.footer-card a {
-    color: var(--text) !important;     /* match your site text color */
-    text-decoration: none;
-    font-weight: 600;
+/* MOST IMPORTANT FIX */
+@media (max-device-width: 768px) {
+  .hamburger {
+    display: flex !important;
+  }
+
+  .nav {
+    right: 0 !important;
+    transform: translateX(100%) !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #about .container {
+    grid-template-columns: 1fr !important;
+  }
 }
 
-/* Hover effect */
-.footer-card a:hover {
-    color: var(--accent-1) !important; /* gold accent on hover */
+/* PREVENT BACKGROUND BLEED */
+.hero,
+#about,
+.skills,
+#projects,
+.site-footer {
+  overflow-x: hidden;
 }
