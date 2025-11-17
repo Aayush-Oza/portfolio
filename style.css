@@ -424,7 +424,7 @@ body {
 .copyright {
   text-align: center;
   margin-top: 24px;
-  color: var(--muted);
+  color: black;
 }
 
 /* =====================================================
@@ -445,7 +445,7 @@ body {
 
 .dark-theme .nav-list a,
 .dark-theme .footer-nav a {
-  color: #ffffff !important;
+  color: #4b413a  !important;
 }
 
 .dark-theme .social {
