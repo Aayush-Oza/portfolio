@@ -514,7 +514,7 @@ body.nav-open .nav {
 /* =====================================================
    MOBILE FIX FOR DESKTOP-SITE MODE
 ===================================================== */
-@media (max-device-width: 768px) {
+@media (max-width: 768px) {
 
   .hamburger {
     display: flex !important;
@@ -525,7 +525,14 @@ body.nav-open .nav {
   }
 
   #about .container {
-    grid-template-columns: 1fr !important;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center !important;
+  }
+
+  .about-text {
+    text-align: left !important;
   }
 }
 

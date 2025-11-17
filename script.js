@@ -21,4 +21,9 @@ const body = document.body;
 hamburger.addEventListener("click", () => {
     body.classList.toggle("nav-open");
 });
-
+// CLOSE MENU when a nav link is clicked
+document.querySelectorAll(".nav-list a").forEach(link => {
+    link.addEventListener("click", () => {
+        body.classList.remove("nav-open");
+    });
+});
