@@ -553,3 +553,24 @@ body.nav-open .nav {
 .site-footer {
   overflow-x: hidden;
 }
+/* Force desktop navbar when user enables "Desktop Site" on mobile */
+@media (max-device-width: 768px) and (min-width: 768px) {
+
+  .hamburger {
+    display: none !important;
+  }
+
+  .nav {
+    display: block !important;
+    position: static !important;
+    background: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    padding: 0 !important;
+  }
+
+  .nav-list {
+    flex-direction: row !important;
+    gap: 16px !important;
+  }
+}
