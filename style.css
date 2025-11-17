@@ -42,7 +42,7 @@ body {
 /* FIXED CONTAINER FOR ALL DEVICES */
 .container {
   width: 95%;
-  max-width: 1200px;   /* FIXED WIDTH */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -59,7 +59,6 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* FIX HEADER ALIGNMENT */
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -80,7 +79,6 @@ body {
   color: var(--accent-2);
 }
 
-/* Hamburger Menu */
 .nav-toggle { display: none; }
 
 .hamburger {
@@ -101,7 +99,6 @@ body {
   transition: .35s;
 }
 
-/* Hamburger Animation */
 .nav-toggle:checked + label .line1 {
   transform: translateY(6px) rotate(45deg);
 }
@@ -112,7 +109,6 @@ body {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Mobile Nav */
 .nav {
   position: fixed;
   top: 70px;
@@ -206,7 +202,6 @@ body {
   justify-content: center;
 }
 
-/* Buttons */
 .btn {
   padding: 12px 22px;
   border-radius: 999px;
@@ -309,6 +304,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 1100px) {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -352,7 +348,6 @@ body {
   transform: scale(1.08);
 }
 
-/* spacing before footer */
 #projects {
   padding-bottom: 90px;
   margin-bottom: 50px;
@@ -444,10 +439,10 @@ body {
 }
 
 .dark-theme .nav-list a{
-  color: #4b413a  !important;
+  color: #4b413a !important;
 }
 .dark-theme .footer-nav a {
-  color:white  !important;
+  color:white !important;
 }
 .dark-theme .social {
   background: #4b413a !important;
@@ -477,7 +472,6 @@ body {
   color: #4b413a !important;
 }
 
-/* MOBILE DARK NAV FIX */
 @media (max-width: 767px) {
   .dark-theme .nav-list a {
     color: #ffffff !important;
@@ -531,16 +525,15 @@ body {
 /* =====================================================
    MOBILE FIX FOR DESKTOP-SITE MODE
 ===================================================== */
-
-/* MOST IMPORTANT FIX */
 @media (max-device-width: 768px) {
+
   .hamburger {
     display: flex !important;
   }
 
+  /* FIXED — removed transform override */
   .nav {
     right: 0 !important;
-    transform: translateX(100%) !important;
   }
 
   .projects-grid {
