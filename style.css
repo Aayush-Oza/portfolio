@@ -554,7 +554,8 @@ body.nav-open .nav {
   overflow-x: hidden;
 }
 /* Force desktop navbar when user enables "Desktop Site" on mobile */
-@media (max-device-width: 768px) and (min-width: 768px) {
+/* When mobile user enables "Desktop Site" */
+@media (min-width: 768px) {
 
   .hamburger {
     display: none !important;
