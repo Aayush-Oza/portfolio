@@ -290,8 +290,9 @@ body.nav-open .nav {
 
 .projects-grid {
   display: grid;
-  gap: 26px;
-  margin-top: 10px;
+  gap: 32px; /* more spacing between cards */
+  margin-top: 20px;
+  margin-bottom: 60px; /* space above footer */
 }
 
 @media (min-width: 768px) {
@@ -308,13 +309,14 @@ body.nav-open .nav {
 
 .project {
   background: var(--panel);
-  padding: 24px;
+  padding: 26px;
   border-radius: 18px;
   box-shadow: var(--soft-shadow);
   transition: .25s;
-  height: auto;
+  min-height: 210px; /* ensures equal box size */
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;  /* pushes text to top */
   gap: 12px;
 }
 
@@ -326,11 +328,13 @@ body.nav-open .nav {
 .project-body {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start !important; /* TOP aligned */
   gap: 10px;
+  text-align: left;
 }
 
 .project-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
@@ -344,20 +348,29 @@ body.nav-open .nav {
   line-height: 1.45;
 }
 
-/* Mobile fix */
+/* BUTTON FIX - light theme button background change */
+.light-theme .btn.primary,
+.btn.primary {
+  background: #f2e5ce !important;    /* new softer beige */
+  color: var(--accent-1) !important;
+}
+
+/* MOBILE FIX */
 @media (max-width: 650px) {
   .project {
-    padding: 20px;
+    padding: 22px;
+    min-height: 190px;
   }
 
   .project-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .project-desc {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 }
+
 
 
 /* =====================================================
