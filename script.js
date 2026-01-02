@@ -1,3 +1,8 @@
+window.history.scrollRestoration = "manual";
+
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+});
 // THEME SWITCHER
 const toggle = document.createElement("button");
 toggle.innerText = "🌓 Theme";
