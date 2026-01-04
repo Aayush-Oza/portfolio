@@ -1,7 +1,12 @@
 window.history.scrollRestoration = "manual";
 
 window.addEventListener("load", () => {
-    window.scrollTo(0, 0);
+  // remove hash from URL
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname);
+  }
+
+  window.scrollTo(0, 0);
 });
 // THEME SWITCHER
 const toggle = document.createElement("button");

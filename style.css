@@ -37,6 +37,7 @@ body {
   color: var(--text);
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  padding-top: 80px; /* header height */
 }
 
 /* FIXED CONTAINER FOR ALL DEVICES */
@@ -50,13 +51,9 @@ body {
    HEADER + NAVIGATION
 ===================================================== */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 2000;
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(12px);
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  width: 100%;
 }
 
 .header-inner {
