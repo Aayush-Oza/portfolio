@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <title>Aayush Oza - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script>
+  if (location.hash) {
+    history.replaceState(null, "", location.pathname);
+  }
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+</script>
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="style.css">
@@ -31,18 +38,17 @@
 
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li><a href="#home" data-scroll>Home</a></li>
+<li><a href="#about" data-scroll>About</a></li>
+<li><a href="#skills" data-scroll>Skills</a></li>
+<li><a href="#projects" data-scroll>Projects</a></li>
+<li><a href="#footer" data-scroll>Contact</a></li>
+
             </ul>
         </nav>
 
     </div>
 </header>
-
-
 
 <!-- =============================
       HERO
@@ -59,8 +65,8 @@
             <p class="hero-sub">I build clean, dynamic, and functional websites.</p>
 
             <div class="hero-cta">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="#footer" class="btn ghost">Contact Me</a>
+                <a href="#projects" class="btn primary" data-scroll>View Projects</a>
+                <a href="#footer" class="btn ghost" data-scroll>Contact Me</a>
             </div>
         </div>
 
@@ -95,10 +101,6 @@
 
     </div>
 </section>
-
-
-
-
 <!-- =============================
       SKILLS
 ============================== -->
@@ -107,14 +109,13 @@
         <h2 class="section-title">Skills</h2>
 
         <div class="skills-grid">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
+            <span class="skill">Frontend</span>
+            <span class="skill">C</span>
+            <span class="skill">C++</span>
+            <span class="skill">Java</span>
             <span class="skill">Python</span>
             <span class="skill">Flask</span>
             <span class="skill">MySQL</span>
-            <span class="skill">C</span>
-            <span class="skill">C++</span>
         </div>
 
     </div>
@@ -201,10 +202,11 @@
         <div class="footer-card">
             <h3>Quick Links</h3>
             <nav class="footer-nav">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
+                <li><a href="#home" data-scroll>Home</a></li>
+<li><a href="#about" data-scroll>About</a></li>
+<li><a href="#skills" data-scroll>Skills</a></li>
+<li><a href="#projects" data-scroll>Projects</a></li>
+<li><a href="#footer" data-scroll>Contact</a></li>
             </nav>
         </div>
 
